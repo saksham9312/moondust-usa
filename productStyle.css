@@ -1,0 +1,313 @@
+.get-in-touch {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    /* To ensure the button appears on top of other content */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.get-in-touch:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    color: #1c3bd6;
+}
+
+.social-icons a {
+    /* color: white; */
+    text-decoration: none;
+    margin-left: 10px;
+    position: relative;
+}
+
+.social-icons a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    top: 0;
+    right: -5px;
+    /* Adjust this value to increase/decrease space between icons */
+}
+
+.social-icons a i {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.vl {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-left: 2px solid #1c3bd6;
+    border-radius: 3px;
+    height: 18px;
+}
+
+
+
+
+.headSection {
+    
+    text-align: center;
+    /* Center-align the text */
+    margin: 10rem  auto;
+    margin-bottom: 6rem;
+    /* Center the div */
+    max-width: 80%;
+    /* Set max-width to limit text width */
+}
+
+.headSection h1 {
+    font-size: 50px;
+    /* Set font size for the heading */
+    margin-bottom: 30px;
+    /* Add some spacing below the heading */
+}
+
+.headSection p {
+    font-size: 16px;
+    /* Set font size for the paragraph */
+    line-height: 1.6;
+    /* Set line height for better readability */
+}
+
+.headDisc {
+    max-width: 70%;
+    margin: auto;
+}
+
+
+.imgSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally center the content */
+    margin-top: 0;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.imgDiv {
+    margin: 10px;
+}
+
+.imgDiv .bigImg {
+    width: 317px;
+    height: 455px;
+}
+
+.imgDiv .sImg {
+    width: 317px;
+    height: 212px;
+}
+
+.sDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 850px) {
+    .imgSection {
+        flex-wrap: wrap;
+    }
+
+    .imgDiv {
+        flex: 0 0 100%;
+        /* Take up full width */
+        margin: 10px 0;
+        /* Add vertical margin */
+    }
+
+    .imgDiv .bigImg,
+    .imgDiv  {
+        width: 100%;
+        /* Make images take up full width */
+        height: auto;
+        /* Keep aspect ratio */
+    }
+
+    .sImg{
+        display: none;
+    }
+    .onSmall{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1050px) {
+
+        .onSmall {
+                display: none;
+            }
+}
+
+/* .detSection {
+    max-width: 90%;
+} */
+
+.detailSection {
+
+    text-align: center;
+    /* Center-align the text */
+    margin: 10rem auto;
+    margin-bottom: 6rem;
+    /* Center the div */
+    max-width: 70%;
+    /* Set max-width to limit text width */
+}
+
+.detailSection h1 {
+    font-size: 50px;
+    /* Set font size for the heading */
+    margin-bottom: 30px;
+    /* Add some spacing below the heading */
+}
+
+ .detailDiv {
+    margin: auto;
+    max-width: 70%;
+}
+.detailSection p {
+    font-size: 16px;
+    /* Set font size for the paragraph */
+    line-height: 1.6;
+    /* Set line height for better readability */
+}
+
+.bottomImageSction {
+    /* padding: 0 5rem ; */
+    display: flex;
+        flex-wrap: wrap;
+        padding: 0 6rem;
+        justify-content: space-around;
+        /* Horizontally center the content */
+        margin: 3rem auto;
+        
+}
+
+.bottomImgDiv{
+    width: 505px;
+}
+.bottomDetail {
+    margin-top: 3px;
+    padding: 4px;
+}
+
+.bottomImageSction .botImg {
+    border-radius: 10px;
+    width: 505px;
+        height: 337px;
+}
+
+/* Existing CSS */
+
+@media screen and (max-width: 1024px) {
+    .detailSection {
+        margin: 5rem auto;
+        max-width: 90%;
+    }
+
+    .detailSection h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .detailDiv {
+        max-width: 90%;
+    }
+
+    .bottomImageSction .bottomImgDiv {
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .detailSection {
+        margin: 3rem auto;
+        /* Adjust top margin */
+        max-width: 90%;
+    }
+
+    .detailSection h1 {
+        font-size: 30px;
+        /* Adjust font size */
+        margin-bottom: 15px;
+        /* Adjust bottom margin */
+    }
+
+    .detailDiv {
+        max-width: 90%;
+    }
+
+    .bottomImageSction .bottomImgDiv {
+        max-width: 100%;
+        margin-bottom: 2rem;
+        /* Adjust margin */
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .detailSection {
+        margin: 2rem auto;
+        /* Adjust top margin */
+    }
+
+    .detailSection h1 {
+        font-size: 24px;
+        /* Adjust font size */
+        margin-bottom: 10px;
+        /* Adjust bottom margin */
+    }
+
+    .detailDiv {
+        max-width: 90%;
+    }
+
+    .bottomImageSction .bottomImgDiv {
+        max-width: 100%;
+        margin-bottom: 1rem;
+        /* Adjust margin */
+    }
+}
+
+.featureSection {
+    display: flex;
+        flex-wrap: wrap;
+        padding: 0 6rem;
+        justify-content: space-around;
+        margin-bottom: 6rem;
+ 
+}
+
+.featureDetail{
+    max-width: 200px;
+}
+
+.featureHead {
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+/* Existing CSS */
+

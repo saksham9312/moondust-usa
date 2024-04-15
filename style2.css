@@ -1,0 +1,255 @@
+/* .carousel {
+    margin-left: 10%;
+    margin-right: 10%;
+} */
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none;
+}
+
+
+.slide-container {
+    display: block;
+    
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 10px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover+.carousel-controls label {
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked+.slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slide-container .carousel-controls label {
+    display: block;
+}
+
+input#img-1:checked~.carousel-dots label#img-dot-1,
+input#img-2:checked~.carousel-dots label#img-dot-2,
+input#img-3:checked~.carousel-dots label#img-dot-3,
+input#img-4:checked~.carousel-dots label#img-dot-4,
+input#img-5:checked~.carousel-dots label#img-dot-5,
+input#img-6:checked~.carousel-dots label#img-dot-6 {
+    opacity: 1;
+}
+
+
+input:checked+.slide-container .nav label {
+    display: block;
+}
+
+.get-in-touch {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    /* To ensure the button appears on top of other content */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.get-in-touch:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* .topIcons{
+    background-color: #D1D8E0;
+    padding: 10px;
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+
+} */
+
+/* .social-icons{
+    display: flex;
+}
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.social-icons a i {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.vl {
+    margin-left: 5px;
+    border-left: 2px solid white;
+    border-radius: 3px;
+    height: 20px;
+} */
+
+.social-icons {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    color: #1c3bd6;
+}
+
+.social-icons a {
+    /* color: white; */
+    text-decoration: none;
+    margin-left: 10px;
+    position: relative;
+}
+
+.social-icons a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    top: 0;
+    right: -5px;
+    /* Adjust this value to increase/decrease space between icons */
+}
+
+.social-icons a i {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.vl {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-left: 2px solid #1c3bd6;
+    border-radius: 3px;
+    height: 18px;
+}
+
+.vlc {
+    border-left: 2px solid #1c3bd6;
+}
+
+.scroll-color  {
+    color: #1c3bd6;
+    
+    /* Change the color to your desired color */
+}
